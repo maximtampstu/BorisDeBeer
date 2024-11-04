@@ -1,0 +1,65 @@
+:root {
+    --error: #ff0000;
+    --primary: #000000;
+    --primary-light: #c9c9c9;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+body {
+    height: 100vh;
+    font-family: monospace;
+    font-size: 1rem;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+a {
+    color: var(--primary);
+}
+
+.hidden-media{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40rem;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+@media (min-width: 1000px){
+    .hidden-media{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+}
